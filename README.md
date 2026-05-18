@@ -23,7 +23,7 @@ pip install -r requirements.txt
 3. **启动 Local Server**：
 * 点击左侧导航栏的 **```Developer```** ，并点击**```Local Server```**图标。
 * 点击顶部的 **```Start Server```** 按钮，使得上方的```Status```变成```Running```。
-* 加载准备使用的模型（本地或者通过lms远程加载都可以）。
+* 加载准备使用的模型（本地或者通过```LM Link```远程加载都可以）。
 * 点击准备使用的模型，观察右侧控制台，复制 `API Usage`下方的模型名称和链接。
 
 
