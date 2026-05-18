@@ -15,15 +15,16 @@ pip install -r requirements.txt
 
 ## 🚀 2. 使用 LM Studio 部署本地大模型
 
-工具默认通过 LM Studio 调用本地模型，以确保文本处理免费且隐私不泄露。
+工具通过 LM Studio 调用本地模型，以确保文本处理免费且隐私不泄露。
+
 
 1. **下载与安装**：前往 [LM Studio 官网](https://lmstudio.ai/) 下载对应操作系统的版本并安装。
 2. **下载模型**：打开 LM Studio，在搜索框中寻找适合文本处理的中文模型（推荐 `Qwen3.6` 系列，如 27B 或 35B-A3B 版本，具体视你的显存而定）。
 3. **启动 Local Server**：
-* 点击左侧导航栏的 **"<->" (Local Server)** 图标。
-* 在顶部下拉菜单中加载你刚才下载的模型。
-* 点击绿色的 **"Start Server"** 按钮。
-* 观察控制台，记下 `Base URL`（通常默认是 `http://localhost:1234/v1`）。
+* 点击左侧导航栏的 **```Developer```** ，并点击**```Local Server```**图标。
+* 点击顶部的 **```Start Server```** 按钮，使得上方的```Status```变成```Running```。
+* 加载准备使用的模型（本地或者通过lms远程加载都可以）。
+* 点击准备使用的模型，观察右侧控制台，复制 `API Usage`下方的模型名称和链接。
 
 
 ## ⚙️ 3. 核心配置说明
@@ -86,7 +87,7 @@ CONFIG = {
 * **`INPUT_TXT` / `OUTPUT_TXT`**：待处理的小说原始文件路径，以及处理完成后的纯净版长文本保存路径，其中：
   * `INPUT_TXT`是待处理的小说txt路径。
   * `OUTPUT_TXT`是处理后的小说的保存路径，建议写成```outputs/book-refined.txt```的形式，```outputs```代表工作路径，```book-refined.txt```代表修改后的文件名，各种中间输出也会保存到```outputs```下。
-* **`BASE_URL`**：**必须修改**。改为你在 LM Studio 启动 Local Server 时看到的地址，本机运行通常为 ```http://127.0.0.1:1234/v1```。
+* **`BASE_URL`**：**必须修改**。改为你在 LM Studio 启动 Local Server 时看到的地址。
 * **`MODEL`**：使用的模型名称。建议与 LM Studio 中加载的模型名称保持一致。
 * **`CHUNK_CHARS`（分块大小）**：单次喂给模型的字符数。**如果你的模型上下文窗口较小（如 8k），请务必将其调小至 `3000-5000**`，否则结尾会被截断。
 * **`RESUME`（断点续跑）**：设为 `True` 时，意外中断后重启工具，已处理完的章节将被自动跳过，不重复消耗时间。
