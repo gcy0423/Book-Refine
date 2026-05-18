@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ## 🚀 2. 使用 LM Studio 部署本地大模型
 
 工具通过 LM Studio 调用本地模型，以确保文本处理免费且隐私不泄露。
-
+![lmstudio](lmstudio.jpg)
 
 1. **下载与安装**：前往 [LM Studio 官网](https://lmstudio.ai/) 下载对应操作系统的版本并安装。
 2. **下载模型**：打开 LM Studio，在搜索框中寻找适合文本处理的中文模型（推荐 `Qwen3.6` 系列，如 27B 或 35B-A3B 版本，具体视你的显存而定）。
