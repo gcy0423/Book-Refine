@@ -4,13 +4,11 @@
 
 ## 🛠️ 1. 环境准备与依赖安装
 
-本项目依赖非常轻量，仅需安装 OpenAI 的官方 Python 客户端以及进度条工具。
-
 **环境配置**
 ```bash
 conda create -n book python=3.10 -y
 conda activate book
-pip install -r requirements.txt
+pip install openai tqdm
 ```
 
 ## 🚀 2. 使用 LM Studio 部署本地大模型
